@@ -65,19 +65,19 @@ class App {
   render() {
     this.listElement.innerHTML = ''
 
-    this.repositories.forEach(repo => {
+    this.repositories.forEach(usuario => {
       let imgElement = document.createElement('img')
-      imgElement.setAttribute('src', repo.avatar_url)
+      imgElement.setAttribute('src', usuario.avatar_url)
 
       let titleElement = document.createElement('strong')
-      titleElement.appendChild(document.createTextNode(repo.name))
+      titleElement.appendChild(document.createTextNode(usuario.name))
 
       let descriptionElement = document.createElement('p')
-      descriptionElement.appendChild(document.createTextNode(repo.bio))
+      descriptionElement.appendChild(document.createTextNode(usuario.bio))
 
       let linkElement = document.createElement('a')
       linkElement.setAttribute('target', '_blank')
-      linkElement.setAttribute('href', repo.html_url)
+      linkElement.setAttribute('href', usuario.html_url)
       linkElement.appendChild(document.createTextNode('Acessar'))
 
       let listItemElement = document.createElement('li')
